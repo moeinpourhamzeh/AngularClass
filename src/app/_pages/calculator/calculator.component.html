@@ -1,0 +1,37 @@
+<main class="">
+    <section class="">
+        <div class="calculator-header">
+            <h1>{{firstArgument}} {{operation}} {{secondArgument}} <span *ngIf="finalResult">=</span> {{finalResult}}</h1>
+        </div>
+        <div class="w-full flex grow">
+            <div class="flex flex-col">
+                <div class="flex flex-row">
+                    <button (click)="selectNumber(1)">1</button>
+                    <button (click)="selectNumber(2)">2</button>
+                    <button (click)="selectNumber(3)">3</button>
+                </div>
+                <div class="flex flex-row">
+                    <button (click)="selectNumber(4)">4</button>
+                    <button (click)="selectNumber(5)">5</button>
+                    <button (click)="selectNumber(6)">6</button>
+                </div>
+                <div class="flex flex-row">
+                    <button (click)="selectNumber(7)">7</button>
+                    <button (click)="selectNumber(8)">8</button>
+                    <button (click)="selectNumber(9)">9</button>
+                </div>
+                <div class="flex flex-row">
+                    <button (click)="clear()">c</button>
+                    <button (click)="selectNumber(0)">0</button>
+                    <button (click)="operate()">=</button>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <button class="" (click)="selectOperation('/')">/</button>
+                <button class="" (click)="selectOperation('*')">*</button>
+                <button class="" (click)="selectOperation('-')">-</button>
+                <button class="" (click)="selectOperation('+')">+</button>
+            </div>
+        </div>
+    </section>
+</main>

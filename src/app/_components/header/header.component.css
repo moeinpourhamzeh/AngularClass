@@ -1,0 +1,19 @@
+
+.header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px white;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

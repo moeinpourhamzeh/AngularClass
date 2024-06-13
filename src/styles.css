@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+body,
+html {
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-half {
+    width: 50%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-flow: row;
+}
+
+.flex-col {
+    flex-flow: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.grow {
+    flex-grow: 1;
+}

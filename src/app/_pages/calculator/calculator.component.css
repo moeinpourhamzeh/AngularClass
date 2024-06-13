@@ -1,0 +1,32 @@
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    /* width: 400px;
+    height: 600px; */
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    background-color: gray;
+}
+
+.calculator-header {
+    width: 100%;
+    padding: 10px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: darkslategrey;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+}
