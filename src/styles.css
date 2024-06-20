@@ -15,12 +15,20 @@ html {
     width: 50%;
 }
 
+.w-half-media {
+    width: 50%;
+}
+
 .h-full {
     height: 100%;
 }
 
 .flex {
     display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .flex-row {
@@ -45,4 +53,13 @@ html {
 
 .grow {
     flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .w-half-media {
+        width: 100%;
+    }
+    .h-full-media {
+        height: auto;
+    }
 }
