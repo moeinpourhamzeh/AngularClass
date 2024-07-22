@@ -1,0 +1,9 @@
+<section class="w-full h-full flex justify-center items-center">
+    <div class="form-container flex flex-col items-center gap-10 p-10">
+        <h1>Please Fill The Form</h1>
+        <input [(ngModel)]="contactUsModel.name" type="text" placeholder="Your name" class="w-full input">
+        <input [(ngModel)]="contactUsModel.email" type="text" placeholder="Your e-mail" class="w-full input">
+        <textarea [(ngModel)]="contactUsModel.message" placeholder="Your message" class="w-full input"></textarea>
+        <button class="w-full rounded py-10 bg-primary text-white" (click)="submit()">Submit</button>
+    </div>
+</section>
