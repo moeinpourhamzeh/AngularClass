@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  padding: 10px;
+  border: solid 1px gray;
+}

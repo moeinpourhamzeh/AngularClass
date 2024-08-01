@@ -16,4 +16,11 @@ export class TodoListService {
     return this.http.get<Todo[]>(this.apiLink + 'list')
   }
 
+  public add(todoForSave: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.apiLink + 'Add', todoForSave)
+  }
+
+  public delete(id: number | null | undefined): Observable<number> {
+    return this.http.get<number>(this.apiLink + 'remove/' + id)
+  }
 }

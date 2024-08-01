@@ -1,1 +1,29 @@
-<p>todo-list works!</p>
+<div class="container gap-5">
+  <div class="header flex flex-col gap-5 p-2 items-center">
+    <input type="text"
+           placeholder="Title"
+           class="p-10 rounded bg-gray-600"
+           [(ngModel)]="todoForSave.title">
+    <textarea cols="30"
+              rows="10"
+              placeholder="Description"
+              class="p-10 rounded bg-gray-600"
+              [(ngModel)]="todoForSave.description"></textarea>
+    <button class="bg-cyan-600 text-white rounded border-none px-20 py-2"
+            *ngIf="!addLoading"
+            (click)="save()">Apply</button>
+    <h4 *ngIf="addLoading">Adding to the server</h4>
+  </div>
+
+
+  <div class="flex flex-col gap-5">
+    <div *ngFor="let todo of todos"
+         class="p-10 rounded bg-gray-900 flex flex-col gap-5 min-w-[300px]">
+      <h2 class="font-bold text-2xl">{{todo.title}}</h2>
+      <p class="text-gray-300">{{todo.description}}</p>
+      <button class="bg-orange-600" (click)="delete(todo.id)">Delete</button>
+    </div>
+  </div>
+
+
+</div>
