@@ -29,13 +29,26 @@ export class TodoListComponent {
     })
   }
 
-  save() {
+  submit() {
     this.addLoading = true
-    this.todoService.add(this.todoForSave).subscribe(x => {
-      this.todos.push(x)
-      this.addLoading = false
-      this.todoForSave = new Todo()
-    })
+
+    if (this.todoForSave === null) {
+      this.todoService.add(this.todoForSave).subscribe(x => {
+        this.todos.push(x)
+        this.addLoading = false
+        this.todoForSave = new Todo()
+      })
+    } else {
+      this.todoService.edit(this.todoForSave).subscribe(x => {
+        const index = this.todos.findIndex(x => x.id === this.todoForSave.id)
+        this.todos.splice(index, 1)
+        this.todos.push(x)
+        this.addLoading = false
+        this.todoForSave = new Todo()
+      })
+    }
+
+
   }
 
   delete(id: number | null | undefined) {
@@ -44,4 +57,9 @@ export class TodoListComponent {
       this.todos.splice(index, 1)
     })
   }
+
+  selectTodo(todo: Todo) {
+    this.todoForSave = todo
+  }
+
 }
