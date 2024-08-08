@@ -25,6 +25,6 @@ export class TodoListService {
   }
 
   public edit(todo: Todo): Observable<Todo> {
-    return this.http.post<Todo>(this.apiLink + 'update', todo)
+    return this.http.post<Todo>(this.apiLink + 'update/' + todo.id, todo)
   }
 }

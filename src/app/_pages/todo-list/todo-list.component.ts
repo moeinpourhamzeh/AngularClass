@@ -1,4 +1,3 @@
-import { Observable } from 'rxjs';
 import { Todo } from '../../_models/todo.model';
 import { TodoListService } from '../../_services/todo-list.service';
 import { Component } from '@angular/core';
@@ -32,7 +31,7 @@ export class TodoListComponent {
   submit() {
     this.addLoading = true
 
-    if (this.todoForSave === null) {
+    if (this.todoForSave.id === null) {
       this.todoService.add(this.todoForSave).subscribe(x => {
         this.todos.push(x)
         this.addLoading = false
@@ -60,6 +59,6 @@ export class TodoListComponent {
 
   selectTodo(todo: Todo) {
     this.todoForSave = todo
+    console.log(todo)
   }
-
 }
